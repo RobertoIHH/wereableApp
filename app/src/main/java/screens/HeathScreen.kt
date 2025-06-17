@@ -40,8 +40,12 @@ fun HealthScreen(navController: NavController) {
             // Contador de agua
             item {
                 Card(
+                    onClick = { /* Click en la tarjeta de agua */ },
                     modifier = Modifier.fillMaxWidth(),
-                    backgroundColor = Color(0xFF2196F3).copy(alpha = 0.3f)
+                    backgroundPainter = CardDefaults.cardBackgroundPainter(
+                        startBackgroundColor = Color(0xFF2196F3).copy(alpha = 0.3f),
+                        endBackgroundColor = Color(0xFF2196F3).copy(alpha = 0.2f)
+                    )
                 ) {
                     Column(
                         modifier = Modifier.padding(12.dp),
@@ -77,8 +81,12 @@ fun HealthScreen(navController: NavController) {
             // Ejercicio
             item {
                 Card(
+                    onClick = { /* Click en la tarjeta de ejercicio */ },
                     modifier = Modifier.fillMaxWidth(),
-                    backgroundColor = Color(0xFF4CAF50).copy(alpha = 0.3f)
+                    backgroundPainter = CardDefaults.cardBackgroundPainter(
+                        startBackgroundColor = Color(0xFF4CAF50).copy(alpha = 0.3f),
+                        endBackgroundColor = Color(0xFF4CAF50).copy(alpha = 0.2f)
+                    )
                 ) {
                     Column(
                         modifier = Modifier.padding(12.dp),

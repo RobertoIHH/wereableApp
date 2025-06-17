@@ -45,8 +45,12 @@ fun UtilitiesScreen(navController: NavController) {
             // Alerta contextual por tiempo
             item {
                 Card(
+                    onClick = { /* Click en alerta contextual */ },
                     modifier = Modifier.fillMaxWidth(),
-                    backgroundColor = Color(0xFFFF9800).copy(alpha = 0.3f)
+                    backgroundPainter = CardDefaults.cardBackgroundPainter(
+                        startBackgroundColor = Color(0xFFFF9800).copy(alpha = 0.3f),
+                        endBackgroundColor = Color(0xFFFF9800).copy(alpha = 0.2f)
+                    )
                 ) {
                     Text(
                         text = timeBasedAlert,

@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace = "com.simu_wear.app"
-    compileSdk = 34
+    compileSdk = 35 // ACTUALIZADO de 34 a 35
 
     defaultConfig {
         applicationId = "com.simu_wear.app"
-        minSdk = 30  // CAMBIADO: de 26 a 30 para compatibilidad con health-services-client
-        targetSdk = 34
+        minSdk = 30
+        targetSdk = 34 // Mantener en 34 por compatibilidad
         versionCode = 1
         versionName = "1.0"
     }
@@ -50,7 +50,6 @@ android {
 }
 
 dependencies {
-    implementation(libs.navigation.runtime.android)
     val composeVersion = rootProject.extra["composeVersion"] as String
     val wearComposeVersion = rootProject.extra["wearComposeVersion"] as String
 
@@ -61,34 +60,37 @@ dependencies {
     implementation("androidx.wear.compose:compose-navigation:$wearComposeVersion")
     implementation("androidx.wear.compose:compose-ui-tooling:$wearComposeVersion")
 
-    // Compose BOM
-    implementation(platform("androidx.compose:compose-bom:2024.02.00"))
+    // Compose BOM - VERSION ACTUALIZADA
+    implementation(platform("androidx.compose:compose-bom:2024.09.03"))
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.compose.ui:ui-tooling")
 
-    // Activity & Lifecycle
-    implementation("androidx.activity:activity-compose:1.8.2")
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    // Activity & Lifecycle - VERSIONES COMPATIBLES
+    implementation("androidx.activity:activity-compose:1.9.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.6") // DOWNGRADE para compatibilidad
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.6") // DOWNGRADE para compatibilidad
 
-    // Navigation
-    implementation("androidx.navigation:navigation-compose:2.7.6")
+    // Navigation - VERSION COMPATIBLE
+    implementation("androidx.navigation:navigation-compose:2.8.2") // DOWNGRADE para compatibilidad
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.7.3")
 
     // Data Storage
-    implementation("androidx.datastore:datastore-preferences:1.0.0")
+    implementation("androidx.datastore:datastore-preferences:1.1.1")
 
     // WorkManager para notificaciones
-    implementation("androidx.work:work-runtime-ktx:2.9.0")
+    implementation("androidx.work:work-runtime-ktx:2.9.1")
 
     // Permisos
     implementation("com.google.accompanist:accompanist-permissions:0.32.0")
 
-    // Health & Sensors - VERSIÓN ACTUALIZADA
-    implementation("androidx.health:health-services-client:1.0.0-beta03") // Versión más reciente
+    // Health & Sensors
+    implementation("androidx.health:health-services-client:1.0.0-beta03")
+
+    // SplashScreen API
+    implementation("androidx.core:core-splashscreen:1.0.1")
 }

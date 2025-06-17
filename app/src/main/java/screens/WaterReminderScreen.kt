@@ -53,8 +53,12 @@ fun WaterReminderScreen(navController: NavController) {
 
             item {
                 Card(
+                    onClick = { /* Click en recordatorio de agua */ },
                     modifier = Modifier.fillMaxWidth(),
-                    backgroundColor = Color(0xFF2196F3).copy(alpha = 0.3f)
+                    backgroundPainter = CardDefaults.cardBackgroundPainter(
+                        startBackgroundColor = Color(0xFF2196F3).copy(alpha = 0.3f),
+                        endBackgroundColor = Color(0xFF2196F3).copy(alpha = 0.2f)
+                    )
                 ) {
                     Column(
                         modifier = Modifier.padding(16.dp),

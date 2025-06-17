@@ -74,8 +74,12 @@ fun PomodoroTimerScreen(navController: NavController) {
 
             item {
                 Card(
+                    onClick = { /* Click en la tarjeta del timer */ },
                     modifier = Modifier.fillMaxWidth(),
-                    backgroundColor = Color(0xFF1E1E2E)
+                    backgroundPainter = CardDefaults.cardBackgroundPainter(
+                        startBackgroundColor = Color(0xFF1E1E2E),
+                        endBackgroundColor = Color(0xFF1E1E2E).copy(alpha = 0.8f)
+                    )
                 ) {
                     Column(
                         modifier = Modifier.padding(16.dp),
