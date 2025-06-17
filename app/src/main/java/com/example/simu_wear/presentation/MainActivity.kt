@@ -1,4 +1,3 @@
-// app/src/main/java/com/simu_wear/app/MainActivity.kt
 package com.simu_wear.app
 
 import android.os.Bundle

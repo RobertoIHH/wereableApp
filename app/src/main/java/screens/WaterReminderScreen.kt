@@ -141,4 +141,4 @@ fun WaterReminderScreen(navController: NavController) {
             }
         }
     }
-}1
+}

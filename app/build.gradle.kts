@@ -4,12 +4,12 @@ plugins {
 }
 
 android {
-    namespace = "com.wellwatch.app"
+    namespace = "com.simu_wear.app"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.wellwatch.app"
-        minSdk = 26  // Wear OS 3.0+
+        applicationId = "com.simu_wear.app"
+        minSdk = 30  // CAMBIADO: de 26 a 30 para compatibilidad con health-services-client
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -89,6 +89,6 @@ dependencies {
     // Permisos
     implementation("com.google.accompanist:accompanist-permissions:0.32.0")
 
-    // Health & Sensors (opcional)
-    implementation("androidx.health:health-services-client:1.0.0-beta02")
+    // Health & Sensors - VERSIÓN ACTUALIZADA
+    implementation("androidx.health:health-services-client:1.0.0-beta03") // Versión más reciente
 }

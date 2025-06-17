@@ -1,4 +1,3 @@
-// app/src/main/java/com/simu_wear/app/ui/theme/Theme.kt
 package com.simu_wear.app.ui.theme
 
 import androidx.compose.runtime.Composable

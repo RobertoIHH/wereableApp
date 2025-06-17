@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "WellWatch"
+rootProject.name = "SimuWear"
 include(":app")
