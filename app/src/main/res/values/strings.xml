@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">SimuWear</string>
+    <string name="entertainment">Entretenimiento</string>
+    <string name="health">Salud</string>
+    <string name="social">Social</string>
+    <string name="utilities">Utilidades</string>
+</resources>
